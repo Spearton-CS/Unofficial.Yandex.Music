@@ -1,0 +1,214 @@
+﻿<Window x:Name="window" x:Class="Unofficial.Yandex.Music.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Unofficial.Yandex.Music"
+        mc:Ignorable="d"
+        Height="450"
+        Width="800"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        MinHeight="370"
+        MinWidth="200"
+        Title="Unofficial.Yandex.Music">
+    <Grid>
+        <!--Window border-->
+        <Border
+            Width="auto"
+            Height="auto"
+            BorderBrush="#262930"
+            BorderThickness="2"
+            CornerRadius="30, 30, 0, 30">
+            <!--Main grid [Border child]-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <!--Caption-->
+                <Grid
+                    x:Name="captionGrid"
+                    Height="25">
+                    <!--Caption grradient-->
+                    <Grid.Background>
+                        <LinearGradientBrush>
+                            <GradientBrush.GradientStops>
+                                <GradientStopCollection>
+                                    <GradientStop Color="#ff5800" Offset="0.0"/>
+                                    <GradientStop Color="#f0e30d" Offset="0.10"/>
+                                    <GradientStop Color="#ff5800" Offset="0.20"/>
+                                    <GradientStop Color="#f0e30d" Offset="0.30"/>
+                                    <GradientStop Color="#ff5800" Offset="0.40"/>
+                                    <GradientStop Color="#ff5800" Offset="0.60"/>
+                                </GradientStopCollection>
+                            </GradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Image
+                        x:Name="windowIconBox"
+                        Width="20"
+                        HorizontalAlignment="Left"
+                        Margin="20, 0, 0, 0"/>
+                    <TextBlock
+                        x:Name="windowTitleBlock"
+                        Text="{Binding Title, ElementName=window, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        Padding="5"
+                        Margin="40, 0, 100, 0"
+                        MouseLeftButtonDown="windowTitleBlock_MouseLeftButtonDown"
+                        Foreground="White"/>
+                    <Button x:Name="closeWindowButton" Content="X"
+                            Width="20" Margin="0, 0, 20, 0"
+                            Background="Transparent"
+                            HorizontalAlignment="Right"
+                            Click="closeWindowButton_Click"
+                            Foreground="Red"
+                            BorderThickness="0"/>
+                    <Button x:Name="maximizeWindowButton" Content="☐"
+                            Width="20" Margin="0, 0, 45, 0"
+                            Background="Transparent"
+                            HorizontalAlignment="Right"
+                            Click="maximizeWindowButton_Click"
+                            BorderThickness="0"/>
+                    <Button x:Name="minimizeWindowButton" Content="_"
+                            VerticalContentAlignment="Top" Width="20"
+                            Margin="0, 0, 70, 0" Background="Transparent"
+                            HorizontalAlignment="Right"
+                            Click="minimizeWindowButton_Click"
+                            BorderThickness="0"/>
+                </Grid>
+                <!--All yours content-->
+                <Grid
+                    x:Name="contentGrid"
+                    Grid.Row="1"
+                    Background="#262930"
+                    Opacity="0.9">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Menu
+                        x:Name="generalMenu"
+                        Background="Transparent"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Stretch"
+                        MinWidth="30"
+                        MinHeight="330"
+                        Width="auto"
+                        Height="auto"
+                        Grid.Column="0"
+                        Grid.Row="0">
+                        <MenuItem
+                            x:Name="mainButton"
+                            MinHeight="30"
+                            MinWidth="30"
+                            BorderThickness="0.8"
+                            BorderBrush="White">
+                        </MenuItem>
+                        <MenuItem
+                            x:Name="waveButton"
+                            MinHeight="30"
+                            MinWidth="30"
+                            BorderThickness="0.8"
+                            BorderBrush="White">
+
+                        </MenuItem>
+                        <MenuItem
+                            x:Name="podcastsButton"
+                            MinHeight="30"
+                            MinWidth="30"
+                            BorderThickness="0.8"
+                            BorderBrush="White">
+                        </MenuItem>
+                        <MenuItem
+                            x:Name="likedTracksButton"
+                            MinHeight="30"
+                            MinWidth="30"
+                            BorderThickness="0.8"
+                            BorderBrush="White">
+                        </MenuItem>
+                        <MenuItem
+                            x:Name="likedAlbumsButton"
+                            MinHeight="30"
+                            MinWidth="30"
+                            BorderThickness="0.8"
+                            BorderBrush="White">
+                        </MenuItem>
+                        <MenuItem
+                            x:Name="likedPlaylistsButton"
+                            MinHeight="30"
+                            MinWidth="30"
+                            BorderThickness="0.8"
+                            BorderBrush="White">
+                        </MenuItem>
+                        <MenuItem
+                            x:Name="likedArtistsButton"
+                            MinHeight="30"
+                            MinWidth="30"
+                            BorderThickness="0.8"
+                            BorderBrush="White">
+                        </MenuItem>
+                        <MenuItem
+                            x:Name="downloadedTracksButton"
+                            MinHeight="30"
+                            MinWidth="30"
+                            BorderThickness="0.8"
+                            BorderBrush="White">
+                        </MenuItem>
+                        <MenuItem
+                            x:Name="localTracksButton"
+                            MinHeight="30"
+                            MinWidth="30"
+                            BorderThickness="0.8"
+                            BorderBrush="White">
+                        </MenuItem>
+                        <MenuItem
+                            x:Name="settingsButton"
+                            MinHeight="30"
+                            MinWidth="30"
+                            BorderThickness="0.8"
+                            BorderBrush="White"
+                            VerticalAlignment="Bottom">
+                        </MenuItem>
+                        <MenuItem
+                            x:Name="yaIdButton"
+                            MinHeight="30"
+                            MinWidth="30"
+                            BorderThickness="0.8"
+                            BorderBrush="White"
+                            VerticalAlignment="Bottom">
+                        </MenuItem>
+                    </Menu>
+                    <TextBox
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Stretch"
+                        Background="Transparent"
+                        Height="20"
+                        Margin="20, 0, 0, 0"
+                        Grid.Row="0"
+                        Grid.Column="1">
+                    </TextBox>
+                    <Grid
+                        x:Name="pageGrid"
+                        MinWidth="170"
+                        MinHeight="310"
+                        Width="730"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Margin="20, 20, 0, 0">
+
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

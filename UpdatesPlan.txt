@@ -1,0 +1,13 @@
+﻿1.0 - base Yandex.Music API and base UI (liked tracks, local tracks (MP3), albums, playlists, artists, simple YaID and simple wave)
+1.1 - adding playlists tracks position move (local) in UI
+1.2 - adding local tracks playing (most popular formats)
+1.3 - adding mini player, Yandex.Music main page and podcasts page
+1.4 - adding HighDPI support and/or, advanced resizing
+1.5 - adding advanced playing settings (selecting output device, selecting play method (WasApi, DirectAudio maybe and etc.), equalizer, maybe multi-)
+1.6 - adding HighDPI support or advanced resizing (if 1.4 add 1 thing) OR local tracks many codecs support
+1.7 - adding extensions support (custom themes, localizations, events, pages and maybe windows)
+1.8 - adding official extensions (Discord RPC, Yandex.Station local protocol, Audio codecs packs...)
+1.9 - adding full wave (wave by genres, artists, albums, playlists, emotions, actions, epoch, groups)
+2.0 - adding full Yandex.Music API and UI for it OR Yandex.Translate for auto translation
+2.1 - not added from 2.0
+... - time show what we need to do
